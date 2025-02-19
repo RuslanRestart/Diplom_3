@@ -1,0 +1,121 @@
+[ {
+  "uid" : "7dfe7af9900f7f0a",
+  "name" : "goToSauceTabTest",
+  "time" : {
+    "start" : 1739922836074,
+    "stop" : 1739922839067,
+    "duration" : 2993
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "598b1e407ab618d7",
+  "name" : "registerTest",
+  "time" : {
+    "start" : 1739922892670,
+    "stop" : 1739922897474,
+    "duration" : 4804
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9f034007ec7f7d6e",
+  "name" : "loginByLoginButtonOnRegisterPageTest",
+  "time" : {
+    "start" : 1739922859360,
+    "stop" : 1739922865736,
+    "duration" : 6376
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7d7733e96ef560b0",
+  "name" : "loginByForgotPasswordButtonTest",
+  "time" : {
+    "start" : 1739922865740,
+    "stop" : 1739922873293,
+    "duration" : 7553
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8c7fb81f0a000cb5",
+  "name" : "goToConstructorFromProfileAccTest",
+  "time" : {
+    "start" : 1739922839070,
+    "stop" : 1739922849557,
+    "duration" : 10487
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e7e3c0dfa56a6099",
+  "name" : "loginByLoginButtonTest",
+  "time" : {
+    "start" : 1739922853153,
+    "stop" : 1739922859357,
+    "duration" : 6204
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8b6de0ad7d48b820",
+  "name" : "goToPersonAccTest",
+  "time" : {
+    "start" : 1739922886199,
+    "stop" : 1739922892667,
+    "duration" : 6468
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b852236c652722a7",
+  "name" : "goToBunTabTest",
+  "time" : {
+    "start" : 1739922830299,
+    "stop" : 1739922835965,
+    "duration" : 5666
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bd26f59a31501713",
+  "name" : "logoutTest",
+  "time" : {
+    "start" : 1739922879097,
+    "stop" : 1739922886196,
+    "duration" : 7099
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "87c07c9ff0b02b14",
+  "name" : "goToFillingTabTest",
+  "time" : {
+    "start" : 1739922849561,
+    "stop" : 1739922853149,
+    "duration" : 3588
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1af8d003be462e90",
+  "name" : "loginByPersonAccButtonTest",
+  "time" : {
+    "start" : 1739922873297,
+    "stop" : 1739922879091,
+    "duration" : 5794
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7c09db1a2756e8ef",
+  "name" : "cannotRegisterWithPasswordLessThanSixCharsTest",
+  "time" : {
+    "start" : 1739922897475,
+    "stop" : 1739922901999,
+    "duration" : 4524
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
