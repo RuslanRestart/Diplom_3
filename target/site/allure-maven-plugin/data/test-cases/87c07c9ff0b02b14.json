@@ -1,0 +1,58 @@
+{
+  "uid" : "87c07c9ff0b02b14",
+  "name" : "goToFillingTabTest",
+  "fullName" : "ConstructorTest.goToFillingTabTest",
+  "historyId" : "2c736bd9c240a23e84ac50dbf700a6d",
+  "time" : {
+    "start" : 1739922849561,
+    "stop" : 1739922853149,
+    "duration" : 3588
+  },
+  "description" : "Переход к разделу \"Начинки\"",
+  "descriptionHtml" : "<p>Переход к разделу &quot;Начинки&quot;</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "ConstructorTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "goToFillingTabTest"
+  }, {
+    "name" : "suite",
+    "value" : "ConstructorTest"
+  }, {
+    "name" : "host",
+    "value" : "MSI"
+  }, {
+    "name" : "thread",
+    "value" : "34364@MSI.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "87c07c9ff0b02b14.json",
+  "parameterValues" : [ ]
+}

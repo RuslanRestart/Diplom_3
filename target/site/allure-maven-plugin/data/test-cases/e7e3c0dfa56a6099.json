@@ -1,0 +1,99 @@
+{
+  "uid" : "e7e3c0dfa56a6099",
+  "name" : "loginByLoginButtonTest",
+  "fullName" : "LoginTest.loginByLoginButtonTest",
+  "historyId" : "6d1dadae6a12059e3a40c870b9f7dbd2",
+  "time" : {
+    "start" : 1739922853153,
+    "stop" : 1739922859357,
+    "duration" : 6204
+  },
+  "description" : "Вход по кнопке \"Войти в аккаунт\" на главной странице",
+  "descriptionHtml" : "<p>Вход по кнопке &quot;Войти в аккаунт&quot; на главной странице</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "Вход по кнопке \"Войти в аккаунт\" на главной странице",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Создаем юзера и устанавливаем ему токен",
+      "time" : {
+        "start" : 1739922856353,
+        "stop" : 1739922856904,
+        "duration" : 551
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Авторизация в системе",
+      "time" : {
+        "start" : 1739922856905,
+        "stop" : 1739922857538,
+        "duration" : 633
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 2
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "LoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "loginByLoginButtonTest"
+  }, {
+    "name" : "suite",
+    "value" : "LoginTest"
+  }, {
+    "name" : "host",
+    "value" : "MSI"
+  }, {
+    "name" : "thread",
+    "value" : "34364@MSI.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e7e3c0dfa56a6099.json",
+  "parameterValues" : [ ]
+}
