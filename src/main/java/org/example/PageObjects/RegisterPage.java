@@ -2,7 +2,6 @@ package org.example.PageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class RegisterPage extends BasePage {
 
@@ -11,10 +10,10 @@ public class RegisterPage extends BasePage {
     protected By emailPlaceholder = By.xpath(".//label[@class='input__placeholder text noselect text_type_main-default' and text()='Email']");
     protected By emailInput = By.xpath("(.//input[@class='text input__textfield text_type_main-default'])[2]");
     protected By passwordPlaceholder = By.xpath(".//label[@class='input__placeholder text noselect text_type_main-default' and text()='Пароль']");
-    protected By passwordInput = By.xpath(".//input[@class='text input__textfield text_type_main-default' and @name='Пароль']");
-    protected By registerButton = By.xpath(".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']");
-    protected By incorrectPasswordError = By.xpath(".//p[@class='input__error text_type_main-default']");
-    protected By loginButton = By.xpath(".//a[@class='Auth_link__1fOlj']");
+    protected By passwordInput = By.cssSelector("input.text.input__textfield.text_type_main-default[name='Пароль']");
+    protected By registerButton = By.cssSelector("button.button_button__33qZ0.button_button_type_primary__1O7Bx.button_button_size_medium__3zxIa");
+    protected By incorrectPasswordError = By.cssSelector("p.input__error.text_type_main-default");
+    protected By loginButton = By.cssSelector("a.Auth_link__1fOlj");
 
     public RegisterPage(WebDriver driver) {
         super(driver);
@@ -43,10 +42,7 @@ public class RegisterPage extends BasePage {
     }
 
     public void clickRegisterButton() {
-        WebElement element = driver.findElement(registerButton);
-        if (element.isEnabled()) {
-            element.click();
-        }
+        driver.findElement(registerButton).click();
     }
 
     public boolean incorrectPasswordErrorIsDisplayed(){
@@ -54,9 +50,6 @@ public class RegisterPage extends BasePage {
     }
 
     public void clickLoginButton() {
-        WebElement loginButtonElement = driver.findElement(loginButton);
-        if (loginButtonElement.isEnabled()) {
-            loginButtonElement.click();
-        }
+        driver.findElement(loginButton).click();
     }
 }

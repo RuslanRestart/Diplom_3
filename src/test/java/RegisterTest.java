@@ -1,3 +1,4 @@
+import io.qameta.allure.Description;
 import org.example.PageObjects.BasePage;
 import org.example.PageObjects.LoginPage;
 import org.example.PageObjects.RegisterPage;
@@ -14,6 +15,7 @@ import static org.junit.Assert.assertTrue;
 public class RegisterTest extends BaseTest {
 
     @Test
+    @Description("Успешная регистрация")
     public void registerTest(){
         BasePage page = new BasePage(driver);
         page.clickPersonAccButton();
@@ -26,6 +28,7 @@ public class RegisterTest extends BaseTest {
     }
 
     @Test
+    @Description("Ошибка регистрации для пароля менее 6 символов")
     public void cannotRegisterWithPasswordLessThanSixCharsTest(){
         BasePage page = new BasePage(driver);
         page.clickPersonAccButton();
@@ -35,5 +38,4 @@ public class RegisterTest extends BaseTest {
         registerPage.fillRegisterPage("stellarBurgerLover", "stellarUser" + new Random().nextInt(10000000) + "@ya.ru", "5char");
         assertTrue(registerPage.incorrectPasswordErrorIsDisplayed());
     }
-
 }

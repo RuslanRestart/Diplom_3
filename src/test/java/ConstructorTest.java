@@ -1,5 +1,5 @@
+import io.qameta.allure.Description;
 import org.example.PageObjects.BasePage;
-import org.example.PageObjects.LoginPage;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -7,35 +7,32 @@ import static org.junit.Assert.assertTrue;
 public class ConstructorTest extends BaseTest {
 
     @Test
+    @Description("Переход из Личного кабинета в \"Конструктор\"")
     public void goToConstructorFromProfileAccTest() {
         BasePage basePage = new BasePage(driver);
         basePage.clickPersonAccButton();
-        UserUtil userUtil = new UserUtil();
-        userUtil.createUserFromApi();
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillLoginPage(userUtil.getEmail(), userUtil.getPassword());
+        createUserFromApi();
+        doAuthorization();
         basePage.clickPersonAccButton();
         basePage.clickConstructorButton();
-        assertTrue(loginPage.isCreateOrderButtonDisplayed());
+        assertTrue(basePage.isCreateOrderButtonDisplayed());
     }
 
     @Test
+    @Description("Переход к разделу \"Булки\"")
     public void goToBunTabTest() {
-        assertTrue(new BasePage(driver).isBunHeaderDisplayed());
+        assertTrue(new BasePage(driver).isBunTabSelected());
     }
 
     @Test
+    @Description("Переход к разделу \"Соусы\"")
     public void goToSauceTabTest() {
-        BasePage basePage = new BasePage(driver);
-        basePage.clickSauceTab();
-        assertTrue(basePage.isSauceHeaderDisplayed());
+        assertTrue(new BasePage(driver).isSauceTabSelected());
     }
 
-    //TODO при проверке надо смотреть, выделилась ли нажатая вкладка
     @Test
+    @Description("Переход к разделу \"Начинки\"")
     public void goToFillingTabTest() {
-        BasePage basePage = new BasePage(driver);
-        basePage.clickFillingTab();
-        assertTrue(basePage.isFillingHeaderDisplayed());
+        assertTrue(new BasePage(driver).isFillingTabSelected());
     }
 }

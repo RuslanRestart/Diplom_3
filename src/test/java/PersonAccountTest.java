@@ -1,3 +1,4 @@
+import io.qameta.allure.Description;
 import org.example.PageObjects.BasePage;
 import org.example.PageObjects.LoginPage;
 import org.example.PageObjects.ProfilePage;
@@ -13,31 +14,26 @@ import static org.junit.Assert.assertTrue;
 public class PersonAccountTest extends BaseTest{
 
     @Test
+    @Description("Переход в личный кабинет по кнопке \"Личный кабинет\"")
     public void goToPersonAccTest(){
-        UserUtil userUtil = new UserUtil();
-        userUtil.createUserFromApi();
+        createUserFromApi();
         BasePage basePage = new BasePage(driver);
         basePage.clickPersonAccButton();
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillLoginPage(userUtil.getEmail(), userUtil.getPassword());
+        doAuthorization();
         basePage.clickPersonAccButton();
         assertTrue(new ProfilePage(driver).isProfileButtonDisplayed());
     }
 
     @Test
+    @Description("Выход из аккаунта по кнопке \"Выйти\" в личном кабинете")
     public void logoutTest(){
-        UserUtil userUtil = new UserUtil();
-        userUtil.createUserFromApi();
+        createUserFromApi();
         BasePage basePage = new BasePage(driver);
         basePage.clickPersonAccButton();
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillLoginPage(userUtil.getEmail(), userUtil.getPassword());
+        doAuthorization();
         basePage.clickPersonAccButton();
-        ProfilePage profilePage = new ProfilePage(driver);
-        profilePage.clickLogoutButton();
+        new ProfilePage(driver).clickLogoutButton();
         new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.urlToBe(LoginPage.LOGIN_PAGE_URL));
         assertEquals("Страница авторизации не открылась! Проверь url!", LoginPage.LOGIN_PAGE_URL, driver.getCurrentUrl());
     }
-
-
 }

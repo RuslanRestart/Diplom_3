@@ -1,3 +1,4 @@
+import io.qameta.allure.Description;
 import org.example.PageObjects.BasePage;
 import org.example.PageObjects.ForgotPasswordPage;
 import org.example.PageObjects.LoginPage;
@@ -6,58 +7,53 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class LoginTest extends BaseTest{
+public class LoginTest extends BaseTest {
 
     @Test
-    public void loginByLoginButtonTest(){
+    @Description("Вход по кнопке \"Войти в аккаунт\" на главной странице")
+    public void loginByLoginButtonTest() {
         BasePage basePage = new BasePage(driver);
         basePage.clickLoginButton();
-        UserUtil userUtil = new UserUtil();
-        userUtil.createUserFromApi();
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillLoginPage(userUtil.getEmail(), userUtil.getPassword());
+        createUserFromApi();
+        doAuthorization();
         basePage.waitForCreateOrderButtonIsDisplayed();
-        assertTrue(loginPage.isCreateOrderButtonDisplayed());
-    }
-
-    //TODO подумаь над единичным использование тестового юзера и надо это ли?
-    @Test
-    public void loginByPersonAccButtonTest(){
-        BasePage basePage = new BasePage(driver);
-        basePage.clickPersonAccButton();
-        UserUtil userUtil = new UserUtil();
-        userUtil.createUserFromApi();
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.fillLoginPage(userUtil.getEmail(), userUtil.getPassword());
-        basePage.waitForCreateOrderButtonIsDisplayed();
-        assertTrue(loginPage.isCreateOrderButtonDisplayed());
+        assertTrue(basePage.isCreateOrderButtonDisplayed());
     }
 
     @Test
-    public void loginByLoginButtonOnRegisterPageTest(){
+    @Description("Вход по кнопке \"Личный Кабинет\"")
+    public void loginByPersonAccButtonTest() {
         BasePage basePage = new BasePage(driver);
         basePage.clickPersonAccButton();
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.clickRegisterButton();
+        createUserFromApi();
+        doAuthorization();
+        basePage.waitForCreateOrderButtonIsDisplayed();
+        assertTrue(basePage.isCreateOrderButtonDisplayed());
+    }
+
+    @Test
+    @Description("Вход по кнопке \"Войти\" со страницы регистрации")
+    public void loginByLoginButtonOnRegisterPageTest() {
+        BasePage basePage = new BasePage(driver);
+        basePage.clickPersonAccButton();
+        new LoginPage(driver).clickRegisterButton();
         new RegisterPage(driver).clickLoginButton();
-        UserUtil userUtil = new UserUtil();
-        userUtil.createUserFromApi();
-        loginPage.fillLoginPage(userUtil.getEmail(), userUtil.getPassword());
+        createUserFromApi();
+        doAuthorization();
         basePage.waitForCreateOrderButtonIsDisplayed();
-        assertTrue(loginPage.isCreateOrderButtonDisplayed());
+        assertTrue(basePage.isCreateOrderButtonDisplayed());
     }
 
     @Test
-    public void loginByForgotPasswordButtonTest(){
+    @Description("Вход по кнопке \"Войти\" со страницы восстановления пароля")
+    public void loginByForgotPasswordButtonTest() {
         BasePage basePage = new BasePage(driver);
         basePage.clickPersonAccButton();
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.clickForgotPassword();
+        new LoginPage(driver).clickForgotPassword();
         new ForgotPasswordPage(driver).clickLoginButton();
-        UserUtil userUtil = new UserUtil();
-        userUtil.createUserFromApi();
-        loginPage.fillLoginPage(userUtil.getEmail(), userUtil.getPassword());
+        createUserFromApi();
+        doAuthorization();
         basePage.waitForCreateOrderButtonIsDisplayed();
-        assertTrue(loginPage.isCreateOrderButtonDisplayed());
+        assertTrue(basePage.isCreateOrderButtonDisplayed());
     }
 }
